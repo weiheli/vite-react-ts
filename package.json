@@ -7,9 +7,9 @@
     "preview": "vite preview",
     "lint": "eslint --ext .ts,.tsx, .",
     "lint:fix": "eslint --ext .ts,.tsx --fix .",
-    "test": "jest --watchAll",
-    "test:nocoverage": "jest --coverage=false",
-    "deploy": "pnpm test && pnpm build && git add . && git commit -m \"build: deploy by pnpm script\" --no-verify && git push",
+    "test": "jest",
+    "test:coverage": "jest --coverage=true",
+    "deploy": "pnpm test:coverage && pnpm build && git add . && git commit -m \"build: deploy by pnpm script\" --no-verify && git push",
     "prepare": "husky install"
   },
   "dependencies": {
